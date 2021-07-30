@@ -68,7 +68,23 @@ def run_alexa():
             if i == len(df)-1:
                 print('Please check your Account number!')
                 talk('Please check your account number')
-        
+    elif 'transaction' in command:
+        acc_entered = int(input('Please!, enter you account number: '))
+        talk('Please!, enter your account number: ')
+        for i in range(0,len(df)):
+            if acc_entered == df.account[i]:
+                print(f'Welcome {df.name[i]}!')
+                talk(f'Welcome {df.name[i]}!')
+                print('---------------Recent transaction---------------------')
+                print('---------details--------debit-----credit----------bal-')
+                print('     Home loan          12500                  1400000')
+                print('     Cheque no.420               100000        1500000')
+                talk('Your recent transaction are as follows')
+                break
+                #talk(f'Your current account balance is {df.balance[i]} rupees')
+            if i == len(df)-1:
+                print('Please, Check entered account number')
+                talk('Pleasec Check enetered account number')
     else:
         talk('Please repeat the command')
 
