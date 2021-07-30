@@ -61,11 +61,11 @@ def run_alexa():
         acc_entered = int(input('Please!, Enter you account number: '))
         for i in range(0,len(df)):
             if acc_entered == df.account[i]:
-                talk(f'Welcome {df.name[i]}!')
                 print(f'Welcome {df.name[i]}!')
-                talk(f'Your cuurent account balance is {df.balance[i]}')
-                print(f'Your cuurent account balance is {df.balance[i]}')
-            else:
+                talk(f'Welcome {df.name[i]}!')
+                print(f'Your cuurent account balance is {df.balance[i]} rupees')
+                talk(f'Your cuurent account balance is {df.balance[i]} rupees')
+            if i == len(df)-1:
                 print('Please check your Account number!')
                 talk('Please check your account number')
         
