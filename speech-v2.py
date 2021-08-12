@@ -90,11 +90,11 @@ def run_alexa():
             if i == len(df)-1:
                 print('Please, Check entered account number')
                 talk('Pleasec Check enetered account number')
-    elif 'cheque':
+    elif 'cheque' in command:
         req = int(input('Please!, enter your account number: '))
         talk('Please!, enter your account number: ')
         for i in range(0,len(df)):
-            if acc_entered == df.account[i]:
+            if req == df.account[i]:
                 print(f'Welcome {df.name[i]}!')
                 talk(f'Welcome {df.name[i]}!')
                 talk("Please Enter Your complete address: ")
